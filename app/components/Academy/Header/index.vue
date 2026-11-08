@@ -84,9 +84,6 @@
           </li>
         </ul>
 
-        <AcademyButton class="academy-drawer__cta" :href="registerHref">
-          {{ $t("academy.nav.apply") }}
-        </AcademyButton>
       </aside>
     </Transition>
   </header>
@@ -101,7 +98,7 @@ import { useLocaleStore } from "~/stores/locale";
 const { locale, setLocale } = useI18n();
 const { setLocaleApp } = useLocaleStore();
 const route = useRoute();
-const { homePath, aboutPath, isHome, isAbout, sectionHref, registerHref } = useAcademyLinks();
+const { homePath, aboutPath, isHome, isAbout, sectionHref } = useAcademyLinks();
 const { scrollToTop } = useLandingScroll();
 
 // Sections tracked by the scroll spy, in page order.

@@ -1,0 +1,52 @@
+:root {
+    --font-family: 'tajwal';
+    --font-cairo: 'Cairo', 'Tajwal', sans-serif;
+
+    --landing-purple: #483478;
+    --landing-purple-deep: #2b1b4a;
+    --landing-ink: #1f1926;
+    --landing-muted: #5f5666;
+    --landing-sky: #c6e9fa;
+    --landing-sky-ink: #264857;
+    --landing-lilac: #e9d5ff;
+    --landing-lilac-soft: #d9d2e9;
+    --landing-tint: #f4f8fc;
+    --landing-surface: #f8fafc;
+    --landing-border: #e1e2e6;
+
+    // Cooperative-training academy (Figma "otas-group")
+    --academy-font-body: 'Tajawal', 'Tajwal', sans-serif;
+    --academy-font-display: 'DINArabic-Black', 'Tajawal', sans-serif;
+    --academy-font-number: 'Inter', 'Tajawal', sans-serif;
+
+    --academy-primary: #3a0065;
+    --academy-purple: #483478;
+    --academy-purple-dark: #3f2d6b;
+    --academy-teal: #0cac9d;
+    --academy-ink: #16121b;
+    --academy-tint: #edebf1;
+    --academy-tint-soft: #f1eff4;
+    --academy-tint-section: rgba(72, 52, 120, 0.1);
+    --academy-icon-bg: #ece6f0;
+    --academy-border: #e1e2e6;
+    --academy-footer-link: #e4deef;
+    --academy-elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+
+    --academy-gutter: 80px;
+    --academy-section-y: 100px;
+    --academy-max: 1760px;
+}
+
+@media only screen and (max-width: 1279px) {
+    :root {
+        --academy-gutter: 40px;
+        --academy-section-y: 72px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    :root {
+        --academy-gutter: 16px;
+        --academy-section-y: 48px;
+    }
+}

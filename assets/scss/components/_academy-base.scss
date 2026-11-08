@@ -1,0 +1,200 @@
+@use "../mixins" as *;
+
+// Shared primitives for the cooperative-training academy pages (Figma
+// "otas-group", 1920px frames with 80px gutters). Every size below is the
+// Figma value at 1920px; the clamp() floors keep it readable on small screens.
+
+$academy-ease: cubic-bezier(0.22, 0.61, 0.24, 1);
+
+// The global `* { font-family }` rule in utils/_typography would otherwise
+// beat inheritance on every nested <span>. Zero specificity, so any class
+// below that sets its own font still wins.
+:where([class*="academy-"]) :where(*) {
+  font-family: inherit;
+}
+
+// Clearance for the sticky header so in-page jumps land below it.
+.academy-anchor {
+  scroll-margin-top: 104px;
+
+  @include screen(1279px) {
+    scroll-margin-top: 96px;
+  }
+
+  @include screen(767px) {
+    scroll-margin-top: 80px;
+  }
+}
+
+.academy-container {
+  width: 100%;
+  max-width: calc(var(--academy-max) + 2 * var(--academy-gutter));
+  margin-inline: auto;
+  padding-inline: var(--academy-gutter);
+}
+
+.academy-section {
+  padding-block: var(--academy-section-y);
+  background: #fff;
+
+  &--tint {
+    background: var(--academy-tint-section);
+  }
+
+  &--plain-tint {
+    background: var(--academy-tint);
+  }
+}
+
+// ---- Section intro (title + description) ---------------------------------
+.academy-intro {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.25vw, 24px);
+  width: 100%;
+  color: var(--academy-ink);
+
+  &--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  &--start {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--academy-font-display);
+    font-size: clamp(28px, 2.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.46;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--academy-font-body);
+    font-size: clamp(17px, 1.25vw, 24px);
+    font-weight: 500;
+    line-height: 1.67;
+  }
+
+  &--center &__text {
+    margin-inline: auto;
+  }
+}
+
+// Start-aligned section heading (About page).
+.academy-heading {
+  margin: 0;
+  font-family: var(--academy-font-display);
+  font-size: clamp(28px, 2.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  text-align: start;
+}
+
+// ---- Buttons --------------------------------------------------------------
+.academy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding-inline: 16px;
+  border-radius: 8px;
+  font-family: var(--academy-font-body);
+  font-size: clamp(16px, 1.05vw, 20px);
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s $academy-ease;
+
+  &:focus-visible {
+    outline: 3px solid var(--academy-teal);
+    outline-offset: 3px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--primary {
+    border: 0;
+    background: var(--academy-primary);
+    color: #fff;
+    font-weight: 800;
+
+    &:hover {
+      background: #4c0a80;
+      box-shadow: 0 10px 24px -10px rgba(58, 0, 101, 0.65);
+    }
+  }
+
+  &--outline {
+    border: 1.5px solid var(--academy-primary);
+    background: #fff;
+    color: var(--academy-primary);
+    font-weight: 700;
+
+    &:hover {
+      background: var(--academy-primary);
+      color: #fff;
+    }
+  }
+
+  @include screen(767px) {
+    height: 50px;
+    padding-inline: 16px;
+  }
+}
+
+// ---- Transitions ----------------------------------------------------------
+.academy-pop-enter-active,
+.academy-pop-leave-active {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s $academy-ease;
+}
+
+.academy-pop-enter-from,
+.academy-pop-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.academy-fade-enter-active,
+.academy-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.academy-fade-enter-from,
+.academy-fade-leave-to {
+  opacity: 0;
+}
+
+.academy-slide-enter-active,
+.academy-slide-leave-active {
+  transition: transform 0.3s $academy-ease;
+}
+
+[dir="rtl"] .academy-slide-enter-from,
+[dir="rtl"] .academy-slide-leave-to {
+  transform: translateX(100%);
+}
+
+[dir="ltr"] .academy-slide-enter-from,
+[dir="ltr"] .academy-slide-leave-to {
+  transform: translateX(-100%);
+}

@@ -3,7 +3,7 @@
     <nav class="academy-header__bar" :aria-label="$t('academy.nav.aria_label')">
       <NuxtLink class="academy-header__logo" :to="homePath" :aria-label="$t('academy.nav.back_to_home')"
         @click="onLogoClick">
-        <img class="academy-header__logo-img" src="/assets/icons/academy/otas-logo.svg"
+        <img class="academy-header__logo-img" :src="$asset('/assets/icons/academy/otas-logo.svg')"
           :alt="$t('academy.nav.otas_logo_alt')" width="200" height="76" />
       </NuxtLink>
 
@@ -22,7 +22,7 @@
             aria-haspopup="true" aria-controls="academy-more-menu" @click="moreOpen = !moreOpen">
             <span>{{ $t("academy.nav.more") }}</span>
             <img class="academy-header__caret" :class="{ 'academy-header__caret--open': moreOpen }"
-              src="/assets/icons/academy/caret-down.svg" alt="" width="14" height="8" aria-hidden="true" />
+              :src="$asset('/assets/icons/academy/caret-down.svg')" alt="" width="14" height="8" aria-hidden="true" />
           </button>
 
           <Transition name="academy-pop">
@@ -42,7 +42,7 @@
       <div class="academy-header__tools">
         <button type="button" class="academy-header__lang" :aria-label="$t('academy.nav.switch_language')"
           @click="switchLocale">
-          <img src="/assets/icons/academy/globe.svg" alt="" width="20" height="20" aria-hidden="true" />
+          <img :src="$asset('/assets/icons/academy/globe.svg')" alt="" width="20" height="20" aria-hidden="true" />
           <span class="academy-header__lang-label">{{ nextLocaleCode.toUpperCase() }}</span>
         </button>
 
@@ -64,7 +64,7 @@
       <aside v-if="drawerOpen" id="academy-drawer" class="academy-drawer" role="dialog" aria-modal="true"
         :aria-label="$t('academy.nav.aria_label')">
         <div class="academy-drawer__head">
-          <img src="/assets/icons/academy/otas-logo.svg" :alt="$t('academy.nav.otas_logo_alt')" width="120"
+          <img :src="$asset('/assets/icons/academy/otas-logo.svg')" :alt="$t('academy.nav.otas_logo_alt')" width="120"
             height="46" />
           <button ref="drawerCloseEl" type="button" class="academy-drawer__close"
             :aria-label="$t('academy.nav.close_menu')" @click="drawerOpen = false">

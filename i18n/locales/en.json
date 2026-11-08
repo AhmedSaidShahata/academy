@@ -9,11 +9,12 @@
   },
   "academy": {
     "seo": {
-      "home_title": "Cooperative Training Platform — From Academic Knowledge to Field Practice",
+      "home_title": "OTAS Cooperative Tourism Training Center",
       "home_description": "Discover accredited cooperative training in strategic partnership with Imam Mohammad Ibn Saud Islamic University, with field opportunities for Saudi and international university students in travel, tourism, Hajj and Umrah.",
-      "about_title": "About Us — Cooperative Training Hub",
+      "about_title": "About Us — OTAS Cooperative Tourism Training Center",
       "about_description": "A Saudi platform specialized in travel, tourism and religious tourism, connecting university students with accredited cooperative training opportunities inside and outside the Kingdom.",
-      "keywords": "cooperative training, Co-op, Imam Mohammad Ibn Saud Islamic University, Saudi universities, international universities, travel and tourism, Hajj and Umrah, OTAS, Vision 2030"
+      "keywords": "cooperative training, Co-op, Imam Mohammad Ibn Saud Islamic University, Saudi universities, international universities, travel and tourism, Hajj and Umrah, OTAS, Vision 2030",
+      "site_name": "OTAS Cooperative Tourism Training Center"
     },
     "nav": {
       "aria_label": "Main navigation",
@@ -133,11 +134,11 @@
       "question_1": "What is cooperative training?",
       "answer_1": "It is an experience that connects what you study with practical application, helping you develop your skills, get to know the work environment and meet your university's graduation requirements.",
       "question_2": "How do I apply using the (Register now) button?",
-      "answer_2": "Choose the track that suits you (Saudi universities or international universities), then click the register button to fill in the training request form with your academic details and preferred field. The platform team will contact you to complete the process.",
+      "answer_2": "Click \"Register now\", choose the track that matches your university (Imam University, a Saudi university or an international university), then fill in the data-collection form and attach your official documents.",
       "question_3": "How long is the training and how is it delivered?",
-      "answer_3": "The duration follows your university's study plan and credit-hour requirements. Training is delivered on site at specialized organizations and companies, with academic supervision, follow-up and ongoing evaluation.",
+      "answer_3": "The duration depends on each university's study-plan requirements (from 8 weeks up to a full semester), and training is delivered on site, in a blended format or remotely, depending on the vacancy.",
       "question_4": "How do I choose the right field and program?",
-      "answer_4": "Browse the available vacancies and programs and pick the one that matches your major and career interests. You can also contact us and we will help you choose the best field for your path."
+      "answer_4": "Browse the available vacancy cards and read the tasks and field learning outcomes to choose what fits your major and career path."
     },
     "contact": {
       "title": "Contact Us",
@@ -186,7 +187,7 @@
       "pathway_register": "Register your details"
     },
     "loader": {
-      "tagline": "From academic knowledge to field practice"
+      "tagline": "OTAS Cooperative Tourism Training Center"
     }
   }
 }

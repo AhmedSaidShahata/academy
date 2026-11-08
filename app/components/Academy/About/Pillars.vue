@@ -6,7 +6,7 @@
       <div v-reveal.stagger class="academy-pillars__grid">
         <article v-for="pillar in pillars" :key="pillar.key" class="academy-pillars__card">
           <span class="academy-pillars__icon-box">
-            <img :src="`/assets/icons/academy/${pillar.icon}.svg`" alt="" width="26" height="26" aria-hidden="true" />
+            <img :src="$asset(`/assets/icons/academy/${pillar.icon}.svg`)" alt="" width="26" height="26" aria-hidden="true" />
           </span>
           <h3 class="academy-pillars__title">{{ $t(`academy.about.pillar_${pillar.key}_title`) }}</h3>
           <p class="academy-pillars__text">{{ $t(`academy.about.pillar_${pillar.key}_text`) }}</p>

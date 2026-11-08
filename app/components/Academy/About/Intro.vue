@@ -11,7 +11,7 @@
       </div>
 
       <div v-reveal.end class="academy-about-intro__media">
-        <img class="academy-about-intro__image" src="/assets/images/academy/about-intro.png"
+        <img class="academy-about-intro__image" :src="$asset('/assets/images/academy/about-intro.png')"
           :alt="$t('academy.about.image_alt')" width="1672" height="941" fetchpriority="high" />
       </div>
     </div>

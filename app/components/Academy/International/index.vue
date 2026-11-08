@@ -7,7 +7,7 @@
 
         <ul v-reveal.stagger class="academy-international__features">
           <li v-for="feature in features" :key="feature.key" class="academy-international__feature">
-            <img class="academy-international__feature-icon" :src="`/assets/icons/academy/${feature.icon}.svg`" alt=""
+            <img class="academy-international__feature-icon" :src="$asset(`/assets/icons/academy/${feature.icon}.svg`)" alt=""
               :width="feature.width" height="40" aria-hidden="true" />
             <span class="academy-international__feature-label">
               {{ $t(`academy.international.feature_${feature.key}`) }}
@@ -21,7 +21,7 @@
       </div>
 
       <div v-reveal.end class="academy-international__media">
-        <img class="academy-international__image" src="/assets/images/academy/international.png"
+        <img class="academy-international__image" :src="$asset('/assets/images/academy/international.png')"
           :alt="$t('academy.international.image_alt')" width="673" height="484" loading="lazy" />
       </div>
     </div>

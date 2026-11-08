@@ -1,7 +1,7 @@
 <template>
   <section id="hero" class="academy-hero academy-anchor">
     <div class="academy-hero__media" aria-hidden="true">
-      <img class="academy-hero__image" src="/assets/images/academy/hero.png" alt="" width="2048" height="768"
+      <img class="academy-hero__image" :src="$asset('/assets/images/academy/hero.png')" alt="" width="2048" height="768"
         fetchpriority="high" />
     </div>
 

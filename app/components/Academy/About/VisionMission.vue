@@ -6,7 +6,7 @@
         <div v-reveal class="academy-statements__row">
           <div class="academy-statements__heading">
             <h2 class="academy-statements__title">{{ $t(`academy.about.${item.key}_title`) }}</h2>
-            <img :src="`/assets/icons/academy/${item.icon}.svg`" alt="" width="40" height="40" aria-hidden="true" />
+            <img :src="$asset(`/assets/icons/academy/${item.icon}.svg`)" alt="" width="40" height="40" aria-hidden="true" />
           </div>
           <p class="academy-statements__text">{{ $t(`academy.about.${item.key}_text`) }}</p>
         </div>

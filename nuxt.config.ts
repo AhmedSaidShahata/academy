@@ -50,12 +50,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: [
-        process.env.NUXT_APP_BASE_URL || "/",
-        `${process.env.NUXT_APP_BASE_URL || "/"}en`,
-        `${process.env.NUXT_APP_BASE_URL || "/"}${encodeURI("من-نحن")}`,
-        `${process.env.NUXT_APP_BASE_URL || "/"}en/about-us`,
-      ],
+      // Paths are relative to app.baseURL - Nitro adds NUXT_APP_BASE_URL itself.
+      routes: ["/", "/en", `/${encodeURI("من-نحن")}`, "/en/about-us"],
     },
   },
   pages: true,

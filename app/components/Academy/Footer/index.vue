@@ -5,7 +5,7 @@
     <div class="academy-container academy-footer__main">
       <div class="academy-footer__brand">
         <NuxtLink :to="homePath" class="academy-footer__logo" :aria-label="$t('academy.nav.back_to_home')">
-          <img src="/assets/icons/academy/otas-logo-white.svg" :alt="$t('academy.nav.otas_logo_alt')" width="118"
+          <img :src="$asset('/assets/icons/academy/otas-logo-white.svg')" :alt="$t('academy.nav.otas_logo_alt')" width="118"
             height="45" />
         </NuxtLink>
         <p class="academy-footer__brand-text">{{ $t("academy.footer.brand_text") }}</p>
@@ -41,7 +41,7 @@
                 <span v-if="network.glyph" class="academy-footer__social-glyph" aria-hidden="true">
                   {{ network.glyph }}
                 </span>
-                <img v-else :src="`/assets/icons/academy/social-${network.key}.svg`" alt="" width="18" height="18"
+                <img v-else :src="$asset(`/assets/icons/academy/social-${network.key}.svg`)" alt="" width="18" height="18"
                   aria-hidden="true" />
               </a>
             </li>

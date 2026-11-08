@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="academy-contact academy-anchor">
-    <img class="academy-contact__bg" src="/assets/images/academy/contact-bg.png" alt="" width="2123" height="741"
+    <img class="academy-contact__bg" :src="$asset('/assets/images/academy/contact-bg.png')" alt="" width="2123" height="741"
       loading="lazy" aria-hidden="true" />
     <div class="academy-contact__overlay" aria-hidden="true" />
 
@@ -11,7 +11,7 @@
       <div class="academy-contact__row">
         <a class="academy-contact__card" :href="`mailto:${contact.email}`">
           <span class="academy-contact__icon-box">
-            <img src="/assets/icons/academy/mail.svg" alt="" width="20" height="20" aria-hidden="true" />
+            <img :src="$asset('/assets/icons/academy/mail.svg')" alt="" width="20" height="20" aria-hidden="true" />
           </span>
           <span class="academy-contact__card-text">
             <span class="academy-contact__label">{{ $t("academy.contact.email_label") }}</span>
@@ -21,7 +21,7 @@
 
         <a class="academy-contact__card" :href="`tel:${contact.phone}`">
           <span class="academy-contact__icon-box">
-            <img src="/assets/icons/academy/phone.svg" alt="" width="20" height="20" aria-hidden="true" />
+            <img :src="$asset('/assets/icons/academy/phone.svg')" alt="" width="20" height="20" aria-hidden="true" />
           </span>
           <span class="academy-contact__card-text">
             <span class="academy-contact__label">{{ $t("academy.contact.phone_label") }}</span>

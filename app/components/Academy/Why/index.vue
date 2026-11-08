@@ -7,7 +7,7 @@
         <ul v-reveal.stagger class="academy-why__features">
           <li v-for="feature in features" :key="feature.key" class="academy-why__feature">
             <span class="academy-why__icon-box">
-              <img :src="`/assets/icons/academy/${feature.icon}.svg`" alt="" width="32" height="32"
+              <img :src="$asset(`/assets/icons/academy/${feature.icon}.svg`)" alt="" width="32" height="32"
                 aria-hidden="true" />
             </span>
             <div class="academy-why__feature-text">
@@ -18,7 +18,7 @@
         </ul>
 
         <div v-reveal.end v-tilt class="academy-why__visual">
-          <img class="academy-why__visual-image" src="/assets/images/academy/why-visual.png"
+          <img class="academy-why__visual-image" :src="$asset('/assets/images/academy/why-visual.png')"
             :alt="$t('academy.why.visual_alt')" width="1186" height="1327" loading="lazy" />
           <div class="academy-why__glass">
             <p class="academy-why__glass-title">{{ $t("academy.why.visual_title") }}</p>

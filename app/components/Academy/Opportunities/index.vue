@@ -8,7 +8,7 @@
         <article v-for="item in items" :key="item" class="academy-opportunities__card">
           <div class="academy-opportunities__head">
             <span class="academy-opportunities__icon-box">
-              <img class="academy-opportunities__icon" :src="`/assets/icons/academy/opp-${item}.svg`" alt="" width="48"
+              <img class="academy-opportunities__icon" :src="$asset(`/assets/icons/academy/opp-${item}.svg`)" alt="" width="48"
                 height="48" aria-hidden="true" />
             </span>
             <h3 class="academy-opportunities__title">{{ $t(`academy.opportunities.${item}_title`) }}</h3>

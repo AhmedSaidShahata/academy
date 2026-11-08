@@ -12,7 +12,7 @@
               @click="toggle(index)">
               <span class="academy-faq__question-text">{{ $t(`academy.faq.question_${index}`) }}</span>
               <span class="academy-faq__trigger" aria-hidden="true">
-                <img :src="`/assets/icons/academy/chevron-${openIndex === index ? 'up' : 'down'}.svg`" alt=""
+                <img :src="$asset(`/assets/icons/academy/chevron-${openIndex === index ? 'up' : 'down'}.svg`)" alt=""
                   width="16" height="16" />
               </span>
             </button>

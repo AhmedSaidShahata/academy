@@ -22,6 +22,7 @@ useHead(() => {
     meta: [
       { name: "description", content: description },
       { name: "keywords", content: t("academy.seo.keywords") },
+      { property: "og:site_name", content: t("academy.seo.site_name") },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { name: "twitter:title", content: title },

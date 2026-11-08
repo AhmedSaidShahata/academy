@@ -8,7 +8,7 @@
       </div>
 
       <div v-reveal.zoom class="academy-saudi__media">
-        <img class="academy-saudi__image" src="/assets/images/academy/saudi.png" :alt="$t('academy.saudi.image_alt')"
+        <img class="academy-saudi__image" :src="$asset('/assets/images/academy/saudi.png')" :alt="$t('academy.saudi.image_alt')"
           width="1751" height="898" loading="lazy" />
       </div>
     </div>

@@ -13,7 +13,7 @@
         <span class="landing-loader__arc landing-loader__arc--outer" />
         <span class="landing-loader__arc landing-loader__arc--inner" />
         <span class="landing-loader__disc">
-          <img class="landing-loader__logo" src="/assets/icons/academy/otas-logo-white.svg" alt="" width="118"
+          <img class="landing-loader__logo" :src="$asset('/assets/icons/academy/otas-logo-white.svg')" alt="" width="118"
             height="45" />
         </span>
       </div>

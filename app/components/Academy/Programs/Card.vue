@@ -1,7 +1,7 @@
 <template>
   <article v-tilt class="academy-program" :class="`academy-program--${size}`">
     <div class="academy-program__media" :class="{ 'academy-program__media--contain': contain }">
-      <img class="academy-program__image" :src="`/assets/images/academy/program-${program}.jpg`"
+      <img class="academy-program__image" :src="$asset(`/assets/images/academy/program-${program}.jpg`)"
         :alt="$t(`academy.programs.${program}_title`)" width="1584" height="672" loading="lazy" />
     </div>
 

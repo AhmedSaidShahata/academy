@@ -63,6 +63,11 @@ onMounted(async () => {
   done.value = true;
   await after(FINISH_MS);
   hidden.value = true;
+
+  // Lets entrance effects behind the splash (the hero typing) start only once
+  // they are actually visible.
+  window.__academyLoaderDone = true;
+  window.dispatchEvent(new Event("academy:loader-done"));
 });
 
 onBeforeUnmount(() => {
